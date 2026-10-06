@@ -1,16 +1,14 @@
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
-public class Bed_Script : MonoBehaviour
+public class NpcCol_script : MonoBehaviour
 {
-    public bool inRange;
+    public bool DialogueRange;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            inRange = true;
+            DialogueRange = true;
         }
     }
 
@@ -18,7 +16,7 @@ public class Bed_Script : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            inRange = false;
+            DialogueRange = false;
         }
     }
 }
